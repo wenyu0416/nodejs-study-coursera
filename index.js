@@ -1,6 +1,6 @@
 console.log("hello Node.js");
 
-import { area, perimeter } from './rectangle';
+var rect = require('./rectangle');
 
 function solveRect(l, b) {
     console.log("Solving for rectangle with l = " + l + " and b = " + b);
@@ -8,8 +8,8 @@ function solveRect(l, b) {
     if (l <= 0 || b <= 0) {
         console.log("Rectangle dimensions should be greateer than zero: l = " + l + ", and b = " + b);
     } else {
-        console.log("The area of the rectange is " + area(l, b));
-        console.log("The perimeter of the rectange is " + perimeter(l, b));
+        console.log("The area of the rectange is " + rect.area(l, b));
+        console.log("The perimeter of the rectange is " + rect.perimeter(l, b));
     }
 }
 
